@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Historical Evolution of Version Control Systems</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="history.html">History</a> |
+        <a href="trends.html">Trends</a>
+    </nav>
+
+    <main>
+        <h1>Historical Evolution of Version Control Systems</h1>
+
+        <p>The timeline of VCS</p>
+
+        <ol>
+            <li>
+                <strong>1972: Source Code Control System (SCCS)</strong> – one of the first version control
+                systems, developed at Bell Labs, which introduced the basic idea of tracking changes
+                (initially used on IBM mainframes).
+            </li>
+            <li>
+                <strong>1982: Revision Control System (RCS)</strong> – released by Walter Tichy at Purdue
+                University, RCS automated change tracking for individual files using delta storage
+                (storing differences between file versions). RCS was a local VCS (no network support),
+                handling one file at a time.
+            </li>
+            <li>
+                <strong>1986: Concurrent Versions System (CVS)</strong> – developed by Dick Grune as a
+                front-end to RCS, CVS allowed collaboration on whole projects with a client-server model.
+                It added networked repositories and concurrent multi-developer capabilities to RCS and
+                became widely used in the 1990s despite limitations (e.g., non-atomic commits and
+                tricky branching).
+            </li>
+            <li>
+                <strong>2000: Subversion (SVN)</strong> – created by CollabNet as a successor to CVS,
+                Subversion improved on CVS’s weaknesses. SVN introduced atomic commits (all-or-nothing
+                changesets), better handling of file renames, and more efficient network operations. SVN
+                remained centralized: a single repository stored the code and developers committed to
+                that central server.
+            </li>
+            <li>
+                <strong>2005: Git and Mercurial</strong> – a breakthrough year. After BitKeeper's license
+                issues, Linus Torvalds created Git and Matt Mackall released Mercurial. Both are
+                distributed version control systems (DVCS), where every user has a full copy of the
+                repository. Git quickly became the dominant VCS.
+            </li>
+            <li>
+                <strong>2008: GitHub launched</strong> – GitHub provided a web-based collaboration platform
+                on top of Git, with pull requests, issue tracking, and social features that accelerated
+                Git's adoption. Similar services (Bitbucket, GitLab) followed.
+            </li>
+            <li>
+                <strong>2010s: Wide adoption of Git</strong> – many teams and open-source projects migrated
+                from CVS, SVN, and other tools to Git. Distributed version control became the standard
+                workflow across much of the industry.
+            </li>
+            <li>
+                <strong>Late 2010s: GitOps and modern practices</strong> – the term GitOps (coined by
+                Weaveworks) promoted using Git as the single source of truth for infrastructure and
+                deployments. VCS integration with CI/CD became mainstream.
+            </li>
+            <li>
+                <strong>2020s: AI and large-scale collaboration</strong> – cloud-hosted VCS platforms reached
+                massive scale and AI began assisting code management and review. Version control remains
+                central to modern DevOps workflows.
+            </li>
+        </ol>
+
+        <h2>Why distributed VCS changed the game (branching/merging models)</h2>
+
+        <ul>
+            <li>Centralized VCS: single server holds the official repo; requires network access; single point of failure.</li>
+            <li>Centralized branching: branching/merging was heavier, so teams often used fewer branches.</li>
+            <li>Distributed VCS: every developer has a full clone and full history; commits can be local.</li>
+            <li>Branching is cheap: easy creation/switching encourages feature/topic branches.</li>
+            <li>Merging is first-class: DVCS provide better merge tooling and conflict handling.</li>
+            <li>Offline work: developers can commit, view history, and test without network access.</li>
+            <li>Redundancy: every clone is a backup, reducing risk from server outages or data loss.</li>
+            <li>
+                Practical effects:
+                <ul>
+                    <li>Cheap branches → more parallel development and experimentation.</li>
+                    <li>Local commits → cleaner, organized commit history before sharing.</li>
+                    <li>Stronger merges → scalable team collaboration.</li>
+                    <li>Offline resilience → uninterrupted local work and faster operations.</li>
+                </ul>
+            </li>
+            <li>Summary: DVCS trade some conceptual complexity for flexibility, speed, and resilience, which drove wide adoption (e.g., Git).</li>
+            <li>Result: shift from centralized, file-oriented systems to distributed, collaboration-focused platforms powering modern DevOps.</li>
+        </ul>
+    </main>
+</body>
+</html>
